@@ -1,0 +1,18 @@
+version: '2'
+services:
+  frontend:
+    image: node
+    volumes:
+      - ./services/frontend:/usr/src/app
+    command: ./bin/devel.sh
+    ports:
+      - "3000:3000"
+
+  backend:
+    image: python:3-onbuild
+    volumes:
+      - ./services/backend:/usr/src/app
+      - /tmp/.cache:/root/.cache
+    command: bash -c "./bin/init.sh && ./bin/devel.sh"
+    ports:
+      - "5000:5000"
