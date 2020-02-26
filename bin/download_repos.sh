@@ -8,8 +8,8 @@ if [ ! -d "${PROJECT_ROOT}/services" ]; then
 fi
 
 if [ ! -d "${PROJECT_ROOT}/services/backend" ]; then
-  git clone https://github.com/pyserorg/backend "${PROJECT_ROOT}/services/backend"
+  git clone https://github.com/bsidesns/backend "${PROJECT_ROOT}/services/backend"
 fi
 if [ ! -d "${PROJECT_ROOT}/services/frontend" ]; then
-  git clone https://github.com/pyserorg/frontend "${PROJECT_ROOT}/services/frontend"
+  git clone https://github.com/bsidesns/frontend "${PROJECT_ROOT}/services/frontend"
 fi
