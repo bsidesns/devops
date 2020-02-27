@@ -15,6 +15,6 @@ publish: collect
 	@ssh -t -p 2201 bsidesns.org 'sudo cbsd jexec jname=bsidesnsback supervisorctl restart bsidesns'
 
 shell: up
-	@sudo cbsd jexec user=devel jname=bsidesback /usr/src/bin/shell.sh
+	@${MAKE} ${MFLAGS} -C services/backend shell
 
 .include <${REGGAE_PATH}/mk/project.mk>
