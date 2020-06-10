@@ -1,4 +1,3 @@
-SYSPKG = YES
 REGGAE_PATH = /usr/local/share/reggae
 SERVICES = backend https://github.com/bsidesns/backend \
 	   frontend https://github.com/bsidesns/frontend
